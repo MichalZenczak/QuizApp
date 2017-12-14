@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="question_1">Who was the first man in history to ascend all 14 eight-thousanders?</string>
+    <string name="question_1_answer_1">Reinhold Messner</string>
+    <string name="question_1_answer_2">Jerzy Kukuczka</string>
+    <string name="question_1_answer_3">Denis Urubko</string>
+    <string name="question_1_answer_4">Wojciech Kurtyka</string>
+    <string name="question_2">What is the second highest mountain on Earth?</string>
+    <string name="question_2_answer_1">Lhotse</string>
+    <string name="question_2_answer_2">Makalu</string>
+    <string name="question_2_answer_3">Cho Oyu</string>
+    <string name="question_2_answer_4">K2</string>
+    <string name="question_3">In which year the first successful summer ascent on Mount Everest was recorded?</string>
+    <string name="question_3_answer_1">1935</string>
+    <string name="question_3_answer_2">1948</string>
+    <string name="question_3_answer_3">1953</string>
+    <string name="question_3_answer_4">1960</string>
+    <string name="question_4">Which country has the highest number of eight-thousanders?</string>
+    <string name="question_4_answer_1">Nepal</string>
+    <string name="question_4_answer_2">China</string>
+    <string name="question_4_answer_3">India</string>
+    <string name="question_4_answer_4">Pakistan</string>
+    <string name="question_5">Chomolungma is the Tibetan name for which mountain?</string>
+    <string name="question_5_answer_1">Nanga Parbat</string>
+    <string name="question_5_answer_2">Broad Peak</string>
+    <string name="question_5_answer_3">Lhotse</string>
+    <string name="question_5_answer_4">Mount Everest</string>
+    <string name="score_message_1">You answered correctly to</string>
+    <string name="score_message_2">questions out of total</string>
+    <string name="score_message_3">questions!</string>
+</resources>
