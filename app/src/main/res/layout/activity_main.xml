@@ -42,7 +42,8 @@
             style="@style/textViewStyle"
             android:text="@string/question_2"/>
         <RadioGroup
-            style="@style/radioGroupStyle">
+            style="@style/radioGroupStyle"
+            android:id="@+id/radio_group_question_2">
             <RadioButton
                 style="@style/radioButtonStyle"
                 android:id="@+id/question_2_answer_1_wrong"
@@ -65,7 +66,8 @@
             style="@style/textViewStyle"
             android:text="@string/question_3"/>
         <RadioGroup
-            style="@style/radioGroupStyle">
+            style="@style/radioGroupStyle"
+            android:id="@+id/radio_group_question_3">
             <RadioButton
                 style="@style/radioButtonStyle"
                 android:id="@+id/question_3_answer_1_wrong"
@@ -88,7 +90,8 @@
             style="@style/textViewStyle"
             android:text="@string/question_4"/>
         <RadioGroup
-            style="@style/radioGroupStyle">
+            style="@style/radioGroupStyle"
+            android:id="@+id/radio_group_question_4">
             <RadioButton
                 style="@style/radioButtonStyle"
                 android:id="@+id/question_4_answer_1_wrong"
@@ -111,7 +114,8 @@
             style="@style/textViewStyle"
             android:text="@string/question_5"/>
         <RadioGroup
-            style="@style/radioGroupStyle">
+            style="@style/radioGroupStyle"
+            android:id="@+id/radio_group_question_5">
             <RadioButton
                 style="@style/radioButtonStyle"
                 android:id="@+id/question_5_answer_1_wrong"

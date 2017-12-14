@@ -26,6 +26,8 @@
     <string name="question_5_answer_3">Lhotse</string>
     <string name="question_5_answer_4">Mount Everest</string>
     <string name="score_message_1">You answered correctly to</string>
-    <string name="score_message_2">questions out of total</string>
+    <string name="score_message_2">out of</string>
     <string name="score_message_3">questions!</string>
+    <string name="question_not_answered">You have missed</string>
+    <string name="perfect_score">Perfect Score! Congratulation!</string>
 </resources>
