@@ -18,7 +18,8 @@
             style="@style/textViewStyle"
             android:text="@string/question_1"/>
         <RadioGroup
-            style="@style/radioGroupStyle">
+            style="@style/radioGroupStyle"
+            android:id="@+id/radio_group_question_1">
             <RadioButton
                 style="@style/radioButtonStyle"
                 android:id="@+id/question_1_answer_1_correct"

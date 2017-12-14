@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         submitAnswerButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
 
-                int correctAnswers = checkAnswers();
+                int[] correctAnswers = checkAnswers();
 
                 Toast.makeText(getApplicationContext(), createMessage(correctAnswers, totalQuestions), Toast.LENGTH_SHORT).show();
 
@@ -35,46 +35,55 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method checks the correct answers and calculates the score.
      */
-    public int checkAnswers() {
+    public int[] checkAnswers() {
+            int correctAnswers = 0;
+            int questionsNotChecked = 0;
 
-            int result = 0;
-            RadioButton firstQuestion = findViewById(R.id.question_1_answer_1_correct);
-            Boolean isFirstQuestionCorrect = firstQuestion.isChecked();
-            if (isFirstQuestionCorrect){
-                result += 1;
+            RadioGroup questionOneAnswers = findViewById(R.id.radio_group_question_1);
+            int isQuestionOneChecked = questionOneAnswers.getCheckedRadioButtonId();
+            if (isQuestionOneChecked == -1){
+                questionsNotChecked += 1;
+            }else{
+                RadioButton questionOneCorrectAnswer = findViewById(R.id.question_1_answer_1_correct);
+                Boolean isQuestionOneCorrect = questionOneCorrectAnswer.isChecked();
+                if (isQuestionOneCorrect){
+                    correctAnswers += 1;
+                }
             }
+
 
             RadioButton secondQuestion = findViewById(R.id.question_2_answer_4_correct);
             Boolean isSecondQuestionCorrect = secondQuestion.isChecked();
             if (isSecondQuestionCorrect){
-                result += 1;
+                correctAnswers += 1;
             }
 
             RadioButton thirdQuestion = findViewById(R.id.question_3_answer_3_correct);
             Boolean isThirdQuestionCorrect = thirdQuestion.isChecked();
             if (isThirdQuestionCorrect){
-                result += 1;
+                correctAnswers += 1;
             }
 
             RadioButton fourthQuestion = findViewById(R.id.question_4_answer_2_correct);
             Boolean isFourthQuestionCorrect = fourthQuestion.isChecked();
             if (isFourthQuestionCorrect){
-                result += 1;
+                correctAnswers += 1;
             }
 
             RadioButton fifthQuestion = findViewById(R.id.question_5_answer_4_correct);
             Boolean isFifthQuestionCorrect = fifthQuestion.isChecked();
             if (isFifthQuestionCorrect){
-                result += 1;
+                correctAnswers += 1;
             }
 
-            return result;
+            return new int[] {correctAnswers, questionsNotChecked};
     }
 
-    public String createMessage(int correctAnswers, int totalQuestions){
-        String message = getString(R.string.score_message_1) + correctAnswers;
-        message += "\n" + getString(R.string.score_message_2) + totalQuestions;
+    public String createMessage(int[] correctAnswers, int totalQuestions){
+        String message = getString(R.string.score_message_1) + " " + correctAnswers[0];
+        message += "\n" + getString(R.string.score_message_2) + " " + totalQuestions;
         message += "\n" + getString(R.string.score_message_3);
+        message += "\n" + correctAnswers[1];
         return message;
     }
 
