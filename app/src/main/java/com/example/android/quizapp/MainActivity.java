@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
     public String createMessage(int correctAnswers, int totalQuestions){
         String message = getString(R.string.score_message_1) + correctAnswers;
-        message += getString(R.string.score_message_2) + totalQuestions;
-        message += getString(R.string.score_message_3);
+        message += "\n" + getString(R.string.score_message_2) + totalQuestions;
+        message += "\n" + getString(R.string.score_message_3);
         return message;
     }
 
