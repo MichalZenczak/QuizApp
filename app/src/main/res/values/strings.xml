@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Quiz App</string>
-    <string name="question_1">Who was the first man in history to ascend all 14 eight-thousanders?</string>
+    <string name="question_1">Who was the first man to ascend all fourteen eight-thousanders?</string>
     <string name="question_1_answer_1">Reinhold Messner</string>
     <string name="question_1_answer_2">Jerzy Kukuczka</string>
     <string name="question_1_answer_3">Denis Urubko</string>
@@ -10,12 +10,12 @@
     <string name="question_2_answer_2">Makalu</string>
     <string name="question_2_answer_3">Cho Oyu</string>
     <string name="question_2_answer_4">K2</string>
-    <string name="question_3">In which year the first successful summer ascent on Mount Everest was recorded?</string>
+    <string name="question_3">In which year the first successful ascent on Mount Everest was recorded?</string>
     <string name="question_3_answer_1">1935</string>
     <string name="question_3_answer_2">1948</string>
     <string name="question_3_answer_3">1953</string>
     <string name="question_3_answer_4">1960</string>
-    <string name="question_4">Which country has the highest number of eight-thousanders?</string>
+    <string name="question_4">Which country has the most eight-thousanders?</string>
     <string name="question_4_answer_1">Nepal</string>
     <string name="question_4_answer_2">China</string>
     <string name="question_4_answer_3">India</string>
@@ -28,6 +28,6 @@
     <string name="score_message_1">You answered correctly to</string>
     <string name="score_message_2">out of</string>
     <string name="score_message_3">questions!</string>
-    <string name="question_not_answered">You have missed</string>
+    <string name="question_not_answered">You missed</string>
     <string name="perfect_score">Perfect Score! Congratulation!</string>
 </resources>
