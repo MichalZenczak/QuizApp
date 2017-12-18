@@ -6,4 +6,7 @@
     <color name="textColorPrimary">#212121</color>
     <color name="textColorSecondary">#757575</color>
     <color name="colorBackground">#F5F5F5</color>
+    <color name="colorButtonNormal">#536DFE</color>
+    <color name="colorButtonNormalText">#FFFFFF</color>
+    <color name="correctAnswers">#8BC34A</color>
 </resources>

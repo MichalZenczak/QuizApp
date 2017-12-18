@@ -1,5 +1,6 @@
 package com.example.android.quizapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,17 +18,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button submitAnswerButton = findViewById(R.id.submit_answer);
-        submitAnswerButton.setOnClickListener(new View.OnClickListener(){
+        Intent userNameIntent = getIntent();
+        final String userName = userNameIntent.getExtras().getString("userName");
+
+        Button scoreButton = findViewById(R.id.score_button);
+        scoreButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-
                 int[] results = checkAnswers();
-
-                Toast.makeText(getApplicationContext(), createMessage(results, totalQuestions), Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getApplicationContext(), createMessage(results, totalQuestions, userName), Toast.LENGTH_SHORT).show();
             }
         });
 
+        Button finishButton = findViewById(R.id.finish_button);
+        finishButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
+
+        Button viewAnswersButton = findViewById(R.id.view_answers_button);
+        viewAnswersButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                highlightCorrectAnswers();
+
+            }
+        });
 
     }
 
@@ -102,9 +119,9 @@ public class MainActivity extends AppCompatActivity {
             return new int[] {correctAnswers, questionsNotChecked};
     }
 
-    public String createMessage(int[] results, int totalQuestions){
+    public String createMessage(int[] results, int totalQuestions, String userName){
         String message = "";
-
+        message += getString(R.string.userGreetings) + " " + userName + "\n";
         if (results[1] > 0){
             message += getString(R.string.question_not_answered) + " " + results[1] + " " + getString(R.string.score_message_3);
             return message;
@@ -117,10 +134,24 @@ public class MainActivity extends AppCompatActivity {
             message += "\n" + getString(R.string.score_message_3);
             return message;
         }
-
     }
 
+    public void highlightCorrectAnswers(){
+        RadioButton questionOneCorrectAnswer = findViewById(R.id.question_1_answer_1_correct);
+        questionOneCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
 
+        RadioButton questionTwoCorrectAnswer = findViewById(R.id.question_2_answer_4_correct);
+        questionTwoCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
+
+        RadioButton questionThreeCorrectAnswer = findViewById(R.id.question_3_answer_3_correct);
+        questionThreeCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
+
+        RadioButton questionFourCorrectAnswer = findViewById(R.id.question_4_answer_2_correct);
+        questionFourCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
+
+        RadioButton questionFiveCorrectAnswer = findViewById(R.id.question_5_answer_4_correct);
+        questionFiveCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
+    }
 
 
 }

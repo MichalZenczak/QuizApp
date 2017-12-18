@@ -30,4 +30,11 @@
     <string name="score_message_3">questions!</string>
     <string name="question_not_answered">You missed</string>
     <string name="perfect_score">Perfect Score! Congratulation!</string>
+    <string name="score_button_text">Score</string>
+    <string name="finish_button_text">Finish</string>
+    <string name="start_button_text">Start</string>
+    <string name="view_answers_text">View Answers</string>
+    <string name="userGreetings">Hi</string>
+    <string name="no_input_name">You must enter your name to start the quiz!</string>
+    <string name="name">Name</string>
 </resources>
