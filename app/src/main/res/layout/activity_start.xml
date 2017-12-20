@@ -8,7 +8,6 @@
     android:paddingRight="24dp"
     android:paddingTop="56dp">
 
-
     <EditText
         android:id="@+id/user_name_edit_text"
         android:layout_width="match_parent"

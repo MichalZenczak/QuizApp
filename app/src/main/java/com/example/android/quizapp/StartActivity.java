@@ -3,6 +3,7 @@ package com.example.android.quizapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,17 +23,31 @@ public class StartActivity extends AppCompatActivity {
                 EditText userNameField = findViewById(R.id.user_name_edit_text);
                 String userName = userNameField.getText().toString();
 
-                if(userName.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.no_input_name), Toast.LENGTH_SHORT).show();
-                }else {
+                /**
+                 * Checks if user entered any name to the EditText field. If false it displays a message. If true it starts the quiz
+                 */
+                if (userName.isEmpty()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.no_input_name), Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
+                    toast.show();
+                } else {
                     Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                    myIntent.putExtra("userName",userName);
+                    myIntent.putExtra("userName", userName);
                     startActivityForResult(myIntent, 0);
                 }
 
 
-
             }
         });
+    }
+
+    /**
+     * When this activity is resumed this method clears the EditText
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        EditText userNameField = findViewById(R.id.user_name_edit_text);
+        userNameField.setText("");
     }
 }
