@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_left">24dp</dimen>
+    <dimen name="padding_right">24dp</dimen>
+    <dimen name="padding_top">56dp</dimen>
+    <dimen name="padding_bottom">8dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="margin_left">24dp</dimen>
+    <dimen name="margin_right">24dp</dimen>
+    <dimen name="margin_top">8dp</dimen>
+    <dimen name="start_activity_start_button_margin_top">24dp</dimen>
+    <dimen name="main_activity_text_view_text_size">20sp</dimen>
+    <dimen name="main_activity_radio_button_text_size">16sp</dimen>
+    <dimen name="main_activity_button_layout_width">0dp</dimen>
+    <dimen name="main_activity_button_linear_layout_margin">16dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+</resources>

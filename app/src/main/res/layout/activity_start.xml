@@ -4,9 +4,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/sunset"
     android:orientation="vertical"
-    android:paddingLeft="24dp"
-    android:paddingRight="24dp"
-    android:paddingTop="56dp">
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right"
+    android:paddingTop="@dimen/padding_top">
 
     <EditText
         android:id="@+id/user_name_edit_text"
@@ -19,9 +19,7 @@
         android:id="@+id/start_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="24dp"
-        android:padding="12dp"
+        android:layout_marginTop="@dimen/start_activity_start_button_margin_top"
         android:text="@string/start_button_text"
         android:textColor="@color/colorButtonNormalText" />
 
