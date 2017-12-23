@@ -8,11 +8,18 @@
         <item name="colorButtonNormal">@color/colorButtonNormal</item>
     </style>
 
+    <style name="imageViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+
+    </style>
+
     <style name="textViewStyle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_margin">@dimen/margin</item>
-        <item name="android:textSize">@dimen/main_activity_text_view_text_size</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:maxLines">2</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
@@ -27,27 +34,18 @@
 
     <style name="radioButtonStyle">
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:textSize">@dimen/main_activity_radio_button_text_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textColor">@color/textColorSecondary</item>
     </style>
 
-    <style name="imageCardViewStyle" parent="CardView">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginLeft">@dimen/margin_left</item>
-        <item name="android:layout_marginRight">@dimen/margin_right</item>
-        <item name="android:layout_marginTop">@dimen/margin_top</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
-    </style>
-
-    <style name="textCardViewStyle" parent="CardView">
-        <item name="android:layout_marginLeft">@dimen/margin_left</item>
-        <item name="android:layout_marginRight">@dimen/margin_right</item>
-        <item name="android:layout_marginTop">@dimen/margin_top</item>
+    <style name="CardViewStyle" parent="CardView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:layout_marginRight">@dimen/margin_right</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+        <item name="android:layout_gravity">center</item>
         <item name="cardCornerRadius">@dimen/card_corner_radius</item>
     </style>
 
@@ -59,4 +57,12 @@
         <item name="android:layout_weight">1</item>
     </style>
 
+    <style name="welcomeMessageTextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/colorButtonNormalText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>

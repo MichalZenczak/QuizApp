@@ -8,16 +8,28 @@
     android:paddingRight="@dimen/padding_right"
     android:paddingTop="@dimen/padding_top">
 
+    <TextView style="@style/welcomeMessageTextView"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:text="@string/welcome_message_1"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"/>
+
+    <TextView style="@style/welcomeMessageTextView"
+        android:text="@string/welcome_message_2"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="italic"/>
+
     <EditText
         android:id="@+id/user_name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/start_activity_edit_text_margin_top"
         android:hint="@string/name"
         android:inputType="textCapWords" />
 
     <Button
         android:id="@+id/start_button"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/start_activity_start_button_margin_top"
         android:text="@string/start_button_text"

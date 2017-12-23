@@ -16,16 +16,13 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Button next = (Button) findViewById(R.id.start_button);
+        Button next = findViewById(R.id.start_button);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
                 EditText userNameField = findViewById(R.id.user_name_edit_text);
                 String userName = userNameField.getText().toString();
 
-                /**
-                 * Checks if user entered any name to the EditText field. If false it displays a message. If true it starts the quiz
-                 */
                 if (userName.isEmpty()) {
                     Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.no_input_name), Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);

@@ -37,4 +37,6 @@
     <string name="userGreetings">Hi</string>
     <string name="no_input_name">Please enter your name</string>
     <string name="name">Name</string>
+    <string name="welcome_message_1">Welcome to the Himalayas!</string>
+    <string name="welcome_message_2">This quiz is about the Himalaya mountains and some of their historical facts. Good luck!</string>
 </resources>

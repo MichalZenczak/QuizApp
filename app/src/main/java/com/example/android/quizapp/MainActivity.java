@@ -13,19 +13,34 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     final int totalQuestions = 5;
+    Button scoreButton, finishButton, viewAnswersButton ;
+    RadioGroup questionOneAnswers, questionTwoAnswers, questionThreeAnswers, questionFourAnswers, questionFiveAnswers;
+    RadioButton questionOneCorrectAnswer, questionTwoCorrectAnswer, questionThreeCorrectAnswer, questionFourCorrectAnswer, questionFiveCorrectAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent userNameIntent = getIntent();
-        final String userName = userNameIntent.getExtras().getString("userName");
+        scoreButton = findViewById(R.id.score_button);
+        finishButton =  findViewById(R.id.finish_button);
+        viewAnswersButton = findViewById(R.id.view_answers_button);
 
-        /**
-         * When button is clicked the score message is displayed
-         */
-        Button scoreButton = findViewById(R.id.score_button);
+        questionOneAnswers = findViewById(R.id.radio_group_question_1);
+        questionTwoAnswers = findViewById(R.id.radio_group_question_2);
+        questionThreeAnswers = findViewById(R.id.radio_group_question_3);
+        questionFourAnswers = findViewById(R.id.radio_group_question_4);
+        questionFiveAnswers = findViewById(R.id.radio_group_question_5);
+
+        questionOneCorrectAnswer = findViewById(R.id.question_1_answer_1_correct);
+        questionTwoCorrectAnswer = findViewById(R.id.question_2_answer_4_correct);
+        questionThreeCorrectAnswer = findViewById(R.id.question_3_answer_3_correct);
+        questionFourCorrectAnswer = findViewById(R.id.question_4_answer_2_correct);
+        questionFiveCorrectAnswer = findViewById(R.id.question_5_answer_4_correct);
+
+        Intent userNameIntent = getIntent();
+        final String userName = userNameIntent.getStringExtra("userName");
+
         scoreButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 int[] results = checkAnswers();
@@ -34,10 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
-        /**
-         * When button is clicked the start activity is displayed
-         */
-        Button finishButton = findViewById(R.id.finish_button);
+
+
         finishButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -46,10 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        /**
-         * When button is clicked correct answers are highlighted in green
-         */
-        Button viewAnswersButton = findViewById(R.id.view_answers_button);
+
         viewAnswersButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 highlightCorrectAnswers();
@@ -58,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
     /**
      * This method checks if any answer in any question was selected and then checks
@@ -71,66 +80,47 @@ public class MainActivity extends AppCompatActivity {
         int correctAnswers = 0;
         int questionsNotChecked = 0;
 
-        RadioGroup questionOneAnswers = findViewById(R.id.radio_group_question_1);
-        int isQuestionOneChecked = questionOneAnswers.getCheckedRadioButtonId();
-        if (isQuestionOneChecked == -1) {
+
+
+        if (questionOneAnswers.getCheckedRadioButtonId() == -1) {
             questionsNotChecked += 1;
         } else {
-            RadioButton questionOneCorrectAnswer = findViewById(R.id.question_1_answer_1_correct);
-            Boolean isQuestionOneCorrect = questionOneCorrectAnswer.isChecked();
-            if (isQuestionOneCorrect) {
+            if ( questionOneCorrectAnswer.isChecked()) {
                 correctAnswers += 1;
             }
         }
 
-        RadioGroup questionTwoAnswers = findViewById(R.id.radio_group_question_2);
-        int isQuestionTwoChecked = questionTwoAnswers.getCheckedRadioButtonId();
-        if (isQuestionTwoChecked == -1) {
+        if (questionTwoAnswers.getCheckedRadioButtonId() == -1) {
             questionsNotChecked += 1;
         } else {
-            RadioButton questionTwoCorrectAnswer = findViewById(R.id.question_2_answer_4_correct);
-            Boolean isQuestionTwoCorrect = questionTwoCorrectAnswer.isChecked();
-            if (isQuestionTwoCorrect) {
+            if (questionTwoCorrectAnswer.isChecked()) {
                 correctAnswers += 1;
             }
         }
 
-        RadioGroup questionThreeAnswers = findViewById(R.id.radio_group_question_3);
-        int isQuestionThreeChecked = questionThreeAnswers.getCheckedRadioButtonId();
-        if (isQuestionThreeChecked == -1) {
+        if (questionThreeAnswers.getCheckedRadioButtonId() == -1) {
             questionsNotChecked += 1;
         } else {
-            RadioButton questionThreeCorrectAnswer = findViewById(R.id.question_3_answer_3_correct);
-            Boolean isQuestionThreeCorrect = questionThreeCorrectAnswer.isChecked();
-            if (isQuestionThreeCorrect) {
+            if (questionThreeCorrectAnswer.isChecked()) {
                 correctAnswers += 1;
             }
         }
 
-        RadioGroup questionFourAnswers = findViewById(R.id.radio_group_question_4);
-        int isQuestionFourChecked = questionFourAnswers.getCheckedRadioButtonId();
-        if (isQuestionFourChecked == -1) {
+        if (questionFourAnswers.getCheckedRadioButtonId() == -1) {
             questionsNotChecked += 1;
         } else {
-            RadioButton questionFourCorrectAnswer = findViewById(R.id.question_4_answer_2_correct);
-            Boolean isQuestionFourCorrect = questionFourCorrectAnswer.isChecked();
-            if (isQuestionFourCorrect) {
+            if (questionFourCorrectAnswer.isChecked()) {
                 correctAnswers += 1;
             }
         }
 
-        RadioGroup questionFiveAnswers = findViewById(R.id.radio_group_question_5);
-        int isQuestionFiveCheceked = questionFiveAnswers.getCheckedRadioButtonId();
-        if (isQuestionFiveCheceked == -1) {
+        if (questionFiveAnswers.getCheckedRadioButtonId() == -1) {
             questionsNotChecked += 1;
         } else {
-            RadioButton questionFiveCorrectAnswer = findViewById(R.id.question_5_answer_4_correct);
-            Boolean isQuestionFiveCorrect = questionFiveCorrectAnswer.isChecked();
-            if (isQuestionFiveCorrect) {
+            if (questionFiveCorrectAnswer.isChecked()) {
                 correctAnswers += 1;
             }
         }
-
         return new int[]{correctAnswers, questionsNotChecked};
     }
 
@@ -163,21 +153,11 @@ public class MainActivity extends AppCompatActivity {
      * This method changes the text color of correct answers.
      */
     public void highlightCorrectAnswers() {
-        RadioButton questionOneCorrectAnswer = findViewById(R.id.question_1_answer_1_correct);
         questionOneCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
-
-        RadioButton questionTwoCorrectAnswer = findViewById(R.id.question_2_answer_4_correct);
         questionTwoCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
-
-        RadioButton questionThreeCorrectAnswer = findViewById(R.id.question_3_answer_3_correct);
         questionThreeCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
-
-        RadioButton questionFourCorrectAnswer = findViewById(R.id.question_4_answer_2_correct);
         questionFourCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
-
-        RadioButton questionFiveCorrectAnswer = findViewById(R.id.question_5_answer_4_correct);
         questionFiveCorrectAnswer.setTextColor(getResources().getColor(R.color.correctAnswers));
     }
-
 
 }
