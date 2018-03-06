@@ -16,24 +16,24 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Button next = findViewById(R.id.start_button);
-        next.setOnClickListener(new View.OnClickListener() {
+        Button startButton = findViewById(R.id.start_button);
+        startButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
                 EditText userNameField = findViewById(R.id.user_name_edit_text);
                 String userName = userNameField.getText().toString();
 
+                // Check if user entered his name, if not show toast message.
                 if (userName.isEmpty()) {
                     Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.no_input_name), Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
                 } else {
+                    // if user entered his name start MainActivity.
                     Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                     myIntent.putExtra("userName", userName);
                     startActivityForResult(myIntent, 0);
                 }
-
-
             }
         });
     }

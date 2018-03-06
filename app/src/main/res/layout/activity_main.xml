@@ -9,156 +9,253 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView style="@style/CardViewStyle">
-
             <ImageView
-                style="@style/imageViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
                 android:src="@drawable/manaslu" />
-
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView style="@style/CardViewStyle">
 
-            <TextView
-                style="@style/textViewStyle"
-                android:text="@string/question_1" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radio_group_question_1"
-                style="@style/radioGroupStyle">
+                <TextView
+                    android:id="@+id/question_1"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_1" />
 
-                <RadioButton
-                    android:id="@+id/question_1_answer_1_correct"
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_1_answer_1" />
+                <RadioGroup
+                    android:id="@+id/radio_group_question_1"
+                    style="@style/radioGroupStyle"
+                    android:layout_below="@+id/question_1">
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_1_answer_2" />
+                    <RadioButton
+                        android:id="@+id/question_1_answer_1_correct"
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_1_answer_1" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_1_answer_3" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_1_answer_2" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_1_answer_4" />
-            </RadioGroup>
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_1_answer_3" />
+
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_1_answer_4" />
+                </RadioGroup>
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView style="@style/CardViewStyle">
 
-            <TextView
-                style="@style/textViewStyle"
-                android:text="@string/question_2" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radio_group_question_2"
-                style="@style/radioGroupStyle">
+                <TextView
+                    android:id="@+id/question_2"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_2" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_2_answer_1" />
+                <RadioGroup
+                    android:id="@+id/radio_group_question_2"
+                    style="@style/radioGroupStyle"
+                    android:layout_below="@id/question_2">
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_2_answer_2" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_2_answer_1" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_2_answer_3" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_2_answer_2" />
 
-                <RadioButton
-                    android:id="@+id/question_2_answer_4_correct"
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_2_answer_4" />
-            </RadioGroup>
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_2_answer_3" />
+
+                    <RadioButton
+                        android:id="@+id/question_2_answer_4_correct"
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_2_answer_4" />
+                </RadioGroup>
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView style="@style/CardViewStyle">
 
-            <TextView
-                style="@style/textViewStyle"
-                android:text="@string/question_3" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radio_group_question_3"
-                style="@style/radioGroupStyle">
+                <TextView
+                    android:id="@+id/question_3"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_3" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_3_answer_1" />
+                <RadioGroup
+                    android:id="@+id/radio_group_question_3"
+                    style="@style/radioGroupStyle"
+                    android:layout_below="@id/question_3">
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_3_answer_2" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_3_answer_1" />
 
-                <RadioButton
-                    android:id="@+id/question_3_answer_3_correct"
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_3_answer_3" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_3_answer_2" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_3_answer_4" />
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/question_3_answer_3_correct"
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_3_answer_3" />
+
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_3_answer_4" />
+                </RadioGroup>
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView style="@style/CardViewStyle">
 
-            <TextView
-                style="@style/textViewStyle"
-                android:text="@string/question_4" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radio_group_question_4"
-                style="@style/radioGroupStyle">
+                <TextView
+                    android:id="@+id/question_4"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_4" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_4_answer_1" />
+                <RadioGroup
+                    android:id="@+id/radio_group_question_4"
+                    style="@style/radioGroupStyle"
+                    android:layout_below="@id/question_4">
 
-                <RadioButton
-                    android:id="@+id/question_4_answer_2_correct"
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_4_answer_2" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_4_answer_1" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_4_answer_3" />
+                    <RadioButton
+                        android:id="@+id/question_4_answer_2_correct"
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_4_answer_2" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_4_answer_4" />
-            </RadioGroup>
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_4_answer_3" />
+
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_4_answer_4" />
+                </RadioGroup>
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView style="@style/CardViewStyle">
 
-            <TextView
-                style="@style/textViewStyle"
-                android:text="@string/question_5" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radio_group_question_5"
-                style="@style/radioGroupStyle">
+                <TextView
+                    android:id="@+id/question_5"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_5" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_5_answer_1" />
+                <RadioGroup
+                    android:id="@+id/radio_group_question_5"
+                    style="@style/radioGroupStyle"
+                    android:layout_below="@id/question_5">
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_5_answer_2" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_5_answer_1" />
 
-                <RadioButton
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_5_answer_3" />
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_5_answer_2" />
 
-                <RadioButton
-                    android:id="@+id/question_5_answer_4_correct"
-                    style="@style/radioButtonStyle"
-                    android:text="@string/question_5_answer_4" />
-            </RadioGroup>
+                    <RadioButton
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_5_answer_3" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_answer_4_correct"
+                        style="@style/radioButtonStyle"
+                        android:text="@string/question_5_answer_4" />
+                </RadioGroup>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView style="@style/CardViewStyle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/question_6"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_6"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/question_6_answer_1_correct"
+                        style="@style/checkBoxStyle"
+                        android:text="@string/question_6_answer_1" />
+
+                    <CheckBox
+                        android:id="@+id/question_6_answer_2"
+                        style="@style/checkBoxStyle"
+                        android:text="@string/question_6_answer_2" />
+
+                    <CheckBox
+                        android:id="@+id/question_6_answer_3"
+                        style="@style/checkBoxStyle"
+                        android:text="@string/question_6_answer_3" />
+
+                    <CheckBox
+                        android:id="@+id/question_6_answer_4_correct"
+                        style="@style/checkBoxStyle"
+                        android:text="@string/question_6_answer_4" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView style="@style/CardViewStyle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/question_7"
+                    style="@style/textViewStyle"
+                    android:text="@string/question_7" />
+
+                <EditText
+                    android:id="@+id/question_7_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_7"
+                    android:hint="@string/question_7_hint"
+                    android:inputType="number" />
+
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <LinearLayout

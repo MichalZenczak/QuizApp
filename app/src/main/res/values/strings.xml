@@ -25,6 +25,13 @@
     <string name="question_5_answer_2">Broad Peak</string>
     <string name="question_5_answer_3">Lhotse</string>
     <string name="question_5_answer_4">Mount Everest</string>
+    <string name="question_6">Which of these mountains do not lie in the Himalayas?</string>
+    <string name="question_6_answer_1">Aconcagua</string>
+    <string name="question_6_answer_2">Dhaulagiri</string>
+    <string name="question_6_answer_3">Shishapangma</string>
+    <string name="question_6_answer_4">Kilimanjaro</string>
+    <string name="question_7">How many winter expeditions to K2 has been held so far?</string>
+    <string name="question_7_hint">Please enter a number</string>
     <string name="score_message_1">You answered correctly to</string>
     <string name="score_message_2">out of</string>
     <string name="score_message_3">questions!</string>
