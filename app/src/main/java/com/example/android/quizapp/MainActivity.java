@@ -139,7 +139,8 @@ public class MainActivity extends AppCompatActivity {
         if (!(questionSixFirstCorrectAnswer.isChecked() || questionSixSecondCorrectAnswer.isChecked()
                 || questionSixFirstWrongAnswer.isChecked() || questionSixSecondWrongAnswer.isChecked())) {
             questionsNotChecked += 1;
-        } else if (questionSixFirstCorrectAnswer.isChecked() && questionSixSecondCorrectAnswer.isChecked()) {
+        } else if (questionSixFirstCorrectAnswer.isChecked() && questionSixSecondCorrectAnswer.isChecked()
+                && !questionSixFirstWrongAnswer.isChecked() && !questionSixSecondWrongAnswer.isChecked()) {
             correctAnswers += 1;
         }
 
